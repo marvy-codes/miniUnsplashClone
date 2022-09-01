@@ -1,8 +1,6 @@
 function App() {
   return (
-    <div className="App">
-      <h1>unsplash</h1>
-    </div>
+      <h1 className="text-3xl underline">unsplash</h1>
   );
 }
 
