@@ -1,9 +1,9 @@
+import SearchBar from "./SearchBar";
+
 function Landing() {
     return (
         <div>
-            <div className="text-center w-3/5">
-                <input placeholder="search for photos" type="text"/>
-            </div>
+            <SearchBar />
             <div>
                 <div>
                     <p>grid for photos</p>
