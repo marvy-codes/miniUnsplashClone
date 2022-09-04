@@ -1,4 +1,5 @@
 import searchIcon from '../assets/searchIcon.png'
+
 function SearchBar() {
     return (
         <div className="bg-[#C4C4C4] w-full h-[140px] md:h-[200px]">
