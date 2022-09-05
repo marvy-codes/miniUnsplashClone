@@ -11,3 +11,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Responsive design thinking
 - Understanding of CSS animations and transitions
 - implementation of tailwindCss
+- managing state with redux

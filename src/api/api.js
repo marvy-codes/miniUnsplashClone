@@ -1,9 +1,11 @@
 import axios from 'axios'
 const BASE_URL = process.env.BASE_URL
+const ACCESS_KEY = process.env.ACCESS_KEY
 
 
 export default {
     getPictures(collection = "african"){
-        return axios.get(`${BASE_URL}/search/collections?client_id=ZXaM2mCLBFXR3X1Cf-PjYSTijKgYGl2LHVlztgdVT70&query=${collection}&page=90`)
+        console.log(collection);
+        return axios.get(`${BASE_URL}/search/collections?client_id=${ACCESS_KEY}&query=${collection}&page=12&per_page=4`)
     }
 }
