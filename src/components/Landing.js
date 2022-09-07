@@ -8,6 +8,7 @@ function Landing() {
     return (
         <div>
             <SearchBar />
+            
             {fetching   ? <Preloader /> : <Images />}
         </div>
     );
