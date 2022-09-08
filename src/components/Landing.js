@@ -1,14 +1,18 @@
+import React from "react";
 import { useSelector } from "react-redux";
 import SearchBar from "./SearchBar";
 import Preloader from "./Preloader";
 import Images from "./Images";
 
 function Landing() {
-    const [ fetching ]  = useSelector(state => state.images);
+    const { fetching }  = useSelector(state => state.image);
+    console.log(fetching)
     return (
         <div>
             <SearchBar />
-            {fetching   ? <Preloader /> : <Images />}
+           <div>
+             {!fetching   ? <Preloader /> : <Images />}
+           </div>
         </div>
     );
   }
