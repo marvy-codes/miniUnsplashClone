@@ -7,8 +7,6 @@ export const imageSlice = createSlice({
     images: [],
     fetching: false,
     err: ""
-
-    
   },
   reducers: {
     fetchImages: (state, action) => {
