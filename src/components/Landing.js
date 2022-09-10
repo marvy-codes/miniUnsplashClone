@@ -11,7 +11,7 @@ function Landing() {
         <div>
             <SearchBar />
            <div>
-             {!fetching   ? <Preloader /> : <Images />}
+             {fetching   ? <Preloader /> : <Images />}
            </div>
         </div>
     );
