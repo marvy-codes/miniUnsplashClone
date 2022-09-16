@@ -11,6 +11,7 @@ export const imageSlice = createSlice({
   },
   reducers: {
     fetchImages: (state, action) => {
+      
     }
   },
 })
