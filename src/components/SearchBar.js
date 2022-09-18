@@ -15,11 +15,10 @@ function SearchBar() {
 
     const BASE_URL = process.env.BASE_URL
     const ACCESS_KEY = process.env.ACCESS_KEY
-    
     useEffect(() => {
-    axios.get("https://api.unsplash.com/search/collections?client_id=eljG_NFy5hGIPn92DtNh4bzIXoI27UHpBaTzX3ce0ZM&query=africa&page=12&per_page=4")
+    api.getPictures()
     .then((response) => {
-        console.log(response.data.total)
+        console.log(response.data.results)
     }).catch(error => console.log(error.message))
     }, [])
 

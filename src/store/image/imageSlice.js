@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-// import { getPictures } from '../../api/api'
 
 export const imageSlice = createSlice({
   name: 'image',
@@ -11,7 +10,6 @@ export const imageSlice = createSlice({
   },
   reducers: {
     fetchImages: (state, action) => {
-      
     }
   },
 })
