@@ -9,12 +9,13 @@ export const imageSlice = createSlice({
     
   },
   reducers: {
-    fetchImages: (state, action) => {
+    setImages: (state, action) => {
+      state.images = action.payload
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { fetchImages } = imageSlice.actions
+export const { setImages } = imageSlice.actions
 
 export default imageSlice.reducer

@@ -1,25 +1,26 @@
 import { useEffect } from 'react';
 import searchIcon from '../assets/searchIcon.png'
 import  api from '../api/api.js'
-import axios from 'axios'
+import { setImages } from '../store/image/imageSlice'
+import { useDispatch } from 'react-redux'
 
 function SearchBar() {
+    const dispatch = useDispatch()
 
     // const caller = value => {
     //     api.getPictures(value).then(response => {
     //         console.log(response.data.results)
     //     }).catch(error => {
-    //         console.log(error)
-    //     })
+    //         console.log(error)\
     // }
 
-    const BASE_URL = process.env.BASE_URL
-    const ACCESS_KEY = process.env.ACCESS_KEY
     useEffect(() => {
-    api.getPictures()
-    .then((response) => {
-        console.log(response.data.results)
-    }).catch(error => console.log(error.message))
+        api.getPictures()
+        .then((res) => {
+            dispatch(setImages(res.data.results))
+            console.log(res.data.results)
+        }).catch(error => console.log(error.message))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
@@ -40,4 +41,3 @@ function SearchBar() {
   }
   
 export default SearchBar;
-//https://api.unsplash.com/search/collections?client_id=eljG_NFy5hGIPn92DtNh4bzIXoI27UHpBaTzX3ce0ZM&query=africa&page=12&per_page=4
