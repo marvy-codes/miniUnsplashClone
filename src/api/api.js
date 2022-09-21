@@ -5,7 +5,7 @@ const ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY
 export default {
     getPictures(collection = "car"){
         return (
-            axios.get(`${BASE_URL}/search/collections?client_id=${ACCESS_KEY}&query=${collection}&page=12&per_page=6`)
+            axios.get(`${BASE_URL}/search/collections?client_id=${ACCESS_KEY}&query=${collection}&page=10&per_page=9`)
         )
     }
 }
