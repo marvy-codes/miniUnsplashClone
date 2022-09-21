@@ -2,7 +2,6 @@ import React from "react";
 
 function ImageCard(props) {
     return (
-        // eslint-disable-next-line 
         <div className="justify-self-center w-[160px] h-[200px] relative">
             <div className="ml-2 mt-36 absolute">
                 <h1 className="font-medium text-[#FFFF]">{props.name}</h1>
