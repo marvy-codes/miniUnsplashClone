@@ -19,6 +19,6 @@ export const imageSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setImages,toggleFetch } = imageSlice.actions
+export const { setImages, toggleFetch } = imageSlice.actions
 
 export default imageSlice.reducer

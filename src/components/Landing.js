@@ -5,13 +5,13 @@ import Preloader from "./Preloader";
 import Images from "./Images";
 
 function Landing() {
-    const { fetching }  = useSelector(state => state.image);
-    console.log(fetching)
+    const { isFetching }  = useSelector(state => state.image);
+    console.log(isFetching)
     return (
         <div>
             <SearchBar />
            <div>
-             {fetching   ? <Preloader /> : <Images />}
+             {isFetching   ? <Preloader /> : <Images />}
            </div>
         </div>
     );
