@@ -4,7 +4,8 @@ import {useSelector} from 'react-redux'
 
 function Images() {
 
-    const { images }   = useSelector(state => state.image)
+    const { images }   = useSelector(state => state.image);
+
 
     return (
         <div className="h-[140px] max-w-screen-2xl mx-4 sm:mx-8 md:mx-12 2xl:px-[158px] 2xl:mx-auto -translate-y-6">

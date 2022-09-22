@@ -1,7 +1,7 @@
 import { useEffect} from 'react';
 import searchIcon from '../assets/searchIcon.png'
 import  api from '../api/api.js'
-import { setImages } from '../store/image/imageSlice'
+import { setImages, toggleFetch } from '../store/image/imageSlice'
 import { useDispatch } from 'react-redux'
 
 function SearchBar() {
@@ -9,14 +9,15 @@ function SearchBar() {
 
     function handleSearch(event) {
         if(event.charCode === 13) {
-        console.log(event.target.value)
         caller(event.target.value)
     }
     }
 
     const caller = value => {
-        api.getPictures(value).then(response => {
-            console.log(response.data.results)
+        dispatch(toggleFetch())
+        api.getPictures(value).then(res => {
+            dispatch(setImages(res.data.results))
+            dispatch(toggleFetch())
         }).catch(error => {
             console.log(error)
         })
@@ -27,7 +28,6 @@ function SearchBar() {
         api.getPictures()
         .then((res) => {
             dispatch(setImages(res.data.results))
-            console.log(res.data.results)
         }).catch(error => console.log(error.message))
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])

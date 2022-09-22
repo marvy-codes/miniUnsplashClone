@@ -4,18 +4,21 @@ export const imageSlice = createSlice({
   name: 'image',
   initialState: {
     images: [],
-    fetching: false,
+    isFetching: false,
     err: ""
     
   },
   reducers: {
     setImages: (state, action) => {
       state.images = action.payload
+    },
+    toggleFetch: (state) => {
+      state.isFetching = !state.isFetching
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setImages } = imageSlice.actions
+export const { setImages,toggleFetch } = imageSlice.actions
 
 export default imageSlice.reducer
