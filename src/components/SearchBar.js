@@ -1,18 +1,27 @@
-import { useEffect } from 'react';
+import { useEffect} from 'react';
 import searchIcon from '../assets/searchIcon.png'
 import  api from '../api/api.js'
 import { setImages } from '../store/image/imageSlice'
 import { useDispatch } from 'react-redux'
 
 function SearchBar() {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
-    // const caller = value => {
-    //     api.getPictures(value).then(response => {
-    //         console.log(response.data.results)
-    //     }).catch(error => {
-    //         console.log(error)\
-    // }
+    function handleSearch(event) {
+        if(event.charCode === 13) {
+        console.log(event.target.value)
+        caller(event.target.value)
+    }
+    }
+
+    const caller = value => {
+        api.getPictures(value).then(response => {
+            console.log(response.data.results)
+        }).catch(error => {
+            console.log(error)
+        })
+    }
+
 
     useEffect(() => {
         api.getPictures()
@@ -32,7 +41,8 @@ function SearchBar() {
                     placeholder="Search for photo" 
                     type="text" 
                     className="w-[75%] p-[10px] px-[32px] rounded-md text-[#272626] text-xs leading-[10px] focus:outline-none"
-                    
+                    id="input"
+                    onKeyPress={handleSearch}
                     />
                 </div>
             </div>
