@@ -6,15 +6,23 @@ import Images from "./Images";
 
 function Landing() {
     const { isFetching }  = useSelector(state => state.image);
-    console.log(isFetching)
+    const { images }   = useSelector(state => state.image);
+
+    
+
     return (
         <div>
             <SearchBar />
            <div>
-             {isFetching   ? <Preloader /> : <Images />}
+              {images.length === 0 
+              ? 
+                <div>No results found </div> 
+              : 
+                isFetching   ? <Preloader /> : <Images />
+              }
            </div>
         </div>
-    );
+    )
   }
   
   export default Landing;
