@@ -5,8 +5,7 @@ import Preloader from "./Preloader";
 import Images from "./Images";
 
 function Landing() {
-    const { isFetching }  = useSelector(state => state.image);
-    const { images }   = useSelector(state => state.image);
+    const { isFetching, images,  searchWord }  = useSelector(state => state.image);
 
     
 
@@ -16,7 +15,7 @@ function Landing() {
            <div>
               {images.length === 0 
               ? 
-                <div>No results found </div> 
+                <div>No results found for {searchWord}</div> 
               : 
                 isFetching   ? <Preloader /> : <Images />
               }

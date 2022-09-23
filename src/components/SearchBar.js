@@ -1,7 +1,7 @@
 import { useEffect} from 'react';
 import searchIcon from '../assets/searchIcon.png'
 import  api from '../api/api.js'
-import { setImages, toggleFetch } from '../store/image/imageSlice'
+import { setImages, toggleFetch, setSearchWord } from '../store/image/imageSlice'
 import { useDispatch } from 'react-redux'
 
 function SearchBar() {
@@ -9,6 +9,7 @@ function SearchBar() {
 
     function handleSearch(event) {
         if(event.charCode === 13) {
+            dispatch(setSearchWord(event.target.value))
         caller(event.target.value)
     }
     }

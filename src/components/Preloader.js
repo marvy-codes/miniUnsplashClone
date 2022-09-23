@@ -40,6 +40,24 @@ function Preloader() {
                             <p className="w-[140px] h-[20px] bg-[#D3D3D3]"></p>
                         </div>
                     </div>
+                    <div className="justify-self-center bg-[#808080] w-[160px] h-[200px] rounded-lg bg-cover">
+                        <div className="ml-2 mt-36">
+                            <h1 className="w-[140px] h-[20px] bg-[#D3D3D3] mb-[4px]">{''}</h1>
+                            <p className="w-[140px] h-[20px] bg-[#D3D3D3]"></p>
+                        </div>
+                    </div>
+                    <div className="justify-self-center bg-[#808080] w-[160px] h-[200px] rounded-lg bg-cover">
+                        <div className="ml-2 mt-36">
+                            <h1 className="w-[140px] h-[20px] bg-[#D3D3D3] mb-[4px]">{''}</h1>
+                            <p className="w-[140px] h-[20px] bg-[#D3D3D3]"></p>
+                        </div>
+                    </div>
+                    <div className="justify-self-center bg-[#808080] w-[160px] h-[200px] rounded-lg bg-cover">
+                        <div className="ml-2 mt-36">
+                            <h1 className="w-[140px] h-[20px] bg-[#D3D3D3] mb-[4px]">{''}</h1>
+                            <p className="w-[140px] h-[20px] bg-[#D3D3D3]"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
     )
