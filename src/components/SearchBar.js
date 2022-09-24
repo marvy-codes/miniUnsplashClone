@@ -8,10 +8,13 @@ function SearchBar() {
     const dispatch = useDispatch();
 
     function handleSearch(event) {
-        if(event.charCode === 13) {
+        if(event.target.value === "" & event.charCode === 13){
+            alert('You must input a searchWord')
+        }
+        else if(event.charCode === 13){
             dispatch(setSearchWord(event.target.value))
-        caller(event.target.value)
-    }
+            caller(event.target.value)
+        }
     }
 
     const caller = value => {
@@ -24,7 +27,6 @@ function SearchBar() {
         })
     }
 
-
     useEffect(() => {
         api.getPictures()
         .then((res) => {
@@ -36,7 +38,7 @@ function SearchBar() {
     return (
         <div className="bg-[#C4C4C4] w-full h-[140px] md:h-[200px]">
             <div className=" h-[140px] max-w-screen-2xl mx-4 sm:mx-8 md:mx-12 2xl:px-[158px] 2xl:mx-auto ">
-                <div className="flex items-center justify-center h-[140px] md:h-[200px]">
+                <div className="flex items-center justify-center h-[80px] md:h-[200px]">
                     <img src={searchIcon} alt='searchIcon' className="w-[14px] h-[14px] translate-x-6"/>
                     <input 
                     placeholder="Search for photo" 
