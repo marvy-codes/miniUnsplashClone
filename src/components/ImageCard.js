@@ -1,8 +1,19 @@
 import React from "react";
+import { setProps, toggleModal} from '../store/toggle/toggleSlice'
+import { useDispatch } from 'react-redux'
 
 function ImageCard(props) {
+    const dispatch = useDispatch();
+    const imgUrl = props.url;
+    const name = props.name;
+    const area = props.area;
+    const setModalParams = (imgUrl, name, area) => {
+        dispatch(setProps({modalImageUrl: imgUrl, modalUserName: name, modalUserLocation: area}))
+        dispatch(toggleModal())
+    }
+
     return (
-        <div className="justify-self-center w-[160px] h-[200px] relative">
+        <div className="justify-self-center w-[160px] h-[200px] relative" onClick={setModalParams}>
             <div className="ml-2 mt-36 absolute">
                 <h1 className="font-medium text-[#FFFF]">{props.name}</h1>
                 <p className="text-sm font-small text-[#FFFF]">{props.area}</p>

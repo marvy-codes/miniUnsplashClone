@@ -5,7 +5,7 @@ function App() {
   return (
       <>
         <Landing />
-        <Modal />
+        {/* <Modal /> */}
       </>
   );
 }

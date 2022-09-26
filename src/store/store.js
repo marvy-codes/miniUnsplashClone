@@ -6,5 +6,9 @@ export const store = configureStore({
     reducer: {
         image: imageReducer,
         toggle: toggleReducer
-    }
+    },
+    middleware: getDefaultMiddleware =>
+        getDefaultMiddleware({
+            serializableCheck: false
+    })
 });
