@@ -12,4 +12,4 @@ function ImageCard(props) {
     )
 }
 
-export default ImageCard
+export default ImageCard;

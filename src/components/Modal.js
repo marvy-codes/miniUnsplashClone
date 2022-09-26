@@ -1,7 +1,15 @@
 import React from 'react'
+import africa from "../assets/africa.jpeg"
 
-export default function Modal() {
-  return (
-    <div>Modal< stRTER/div>
-  )
+function Modal(props) {
+    return (
+        <div>
+            <img src={africa} alt="modal img" />
+            {/* <img src={props.url} alt="modal img" /> */}
+            <h1 className="font-medium text-[#FFFF]">{props.name}</h1>
+            <p className="text-sm font-small text-[#FFFF]">{props.area}</p>
+        </div>
+    )
 }
+
+export default Modal;
