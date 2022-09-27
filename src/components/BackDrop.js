@@ -9,13 +9,13 @@ function BackDrop() {
     const close = () => {
         dispatch(toggleModal());
         dispatch(setProps({ modalImageUrl: "", modalUserName: "", modalUserLocation: "" }));
-    }
+    };
 
     return (
         <div className={isModalOpen ? "h-screen w-full z-20 bg-[#000000ba] fixed top-0 filter backdrop-blur-[1px]" : "hidden"} onClick={close}>
             {}
         </div>
-    )
-}
+    );
+};
 
 export default BackDrop;

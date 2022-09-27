@@ -1,8 +1,8 @@
 import { useEffect} from 'react';
-import searchIcon from '../assets/searchIcon.png'
-import  api from '../api/api.js'
-import { setImages, toggleFetch, setSearchWord } from '../store/image/imageSlice'
-import { useDispatch } from 'react-redux'
+import searchIcon from '../assets/searchIcon.png';
+import  api from '../api/api.js';
+import { setImages, toggleFetch, setSearchWord } from '../store/image/imageSlice';
+import { useDispatch } from 'react-redux';
 
 function SearchBar() {
     const dispatch = useDispatch();
@@ -15,7 +15,7 @@ function SearchBar() {
             dispatch(setSearchWord(event.target.value))
             caller(event.target.value)
         }
-    }
+    };
 
     const caller = value => {
         dispatch(toggleFetch())
@@ -25,14 +25,14 @@ function SearchBar() {
         }).catch(error => {
             console.log(error)
         })
-    }
+    };
 
     useEffect(() => {
         api.getPictures()
         .then((res) => {
             dispatch(setImages(res.data.results))
         }).catch(error => console.log(error.message))
-    }, [dispatch])
+    }, [dispatch]);
 
     return (
         <div className="bg-[#C4C4C4] w-full h-[140px] md:h-[200px]">
@@ -50,6 +50,6 @@ function SearchBar() {
             </div>
         </div>
     );
-  }
+};
   
 export default SearchBar;

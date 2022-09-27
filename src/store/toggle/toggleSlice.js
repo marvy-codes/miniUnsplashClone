@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 export const toggleSlice = createSlice({
   name: 'toggle',
@@ -20,9 +20,9 @@ export const toggleSlice = createSlice({
         state.modalProps.modalUserLocation = action.payload.modalUserLocation;
     }
   }
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { toggleModal, setProps } = toggleSlice.actions
+export const { toggleModal, setProps } = toggleSlice.actions;
 
-export default toggleSlice.reducer
+export default toggleSlice.reducer;

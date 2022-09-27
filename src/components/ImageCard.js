@@ -1,8 +1,9 @@
 import React from "react";
-import { setProps, toggleModal} from '../store/toggle/toggleSlice'
-import { useDispatch } from 'react-redux'
+import { setProps, toggleModal} from '../store/toggle/toggleSlice';
+import { useDispatch } from 'react-redux';
 
 function ImageCard(props) {
+
     const dispatch = useDispatch();
     
     const setModalParams = () => {
@@ -11,7 +12,7 @@ function ImageCard(props) {
         const area = props.area;
         dispatch(setProps({ modalImageUrl: imgUrl, modalUserName: name, modalUserLocation: area }));
         dispatch(toggleModal());
-    }
+    };
 
     return (
         <div className="justify-self-center w-[160px] h-[200px] relative z-40" onClick={setModalParams}>
@@ -21,7 +22,7 @@ function ImageCard(props) {
             </div>
             <img src={props.url} className=" w-[160px] h-[200px] rounded-lg" alt="img"/>
         </div>
-    )
-}
+    );
+};
 
 export default ImageCard;

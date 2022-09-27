@@ -1,6 +1,6 @@
 import React from "react";
-import ImageCard from "./ImageCard"
-import {useSelector} from 'react-redux'
+import ImageCard from "./ImageCard";
+import {useSelector} from 'react-redux';
 
 function Images() {
 
@@ -21,7 +21,7 @@ function Images() {
                 })}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Images
+export default Images;
