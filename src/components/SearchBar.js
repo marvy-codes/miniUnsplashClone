@@ -32,8 +32,7 @@ function SearchBar() {
         .then((res) => {
             dispatch(setImages(res.data.results))
         }).catch(error => console.log(error.message))
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [dispatch])
 
     return (
         <div className="bg-[#C4C4C4] w-full h-[140px] md:h-[200px]">
