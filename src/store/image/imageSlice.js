@@ -5,7 +5,7 @@ export const imageSlice = createSlice({
   initialState: {
     images: [],
     isFetching: false,
-    searchWord: "",
+    searchWord: "car",
     err: ""
     
   },
